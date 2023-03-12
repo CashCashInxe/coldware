@@ -1,0 +1,10 @@
+local games = {
+    [{6516141723}] = "https://raw.githubusercontent.com/CashCashInxe/coldware/main/doors/loader.lua"
+}
+
+for ids, url in next, games do
+    if table.find(ids, game.PlaceId) then
+        loadstring(game:HttpGet(url))()
+        break
+    end
+end
